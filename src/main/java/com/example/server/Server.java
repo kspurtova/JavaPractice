@@ -152,14 +152,15 @@ public class Server {
                             timer ++;
                             for (ServerClient serverClient : allClient) {
                                 serverClient.sendTime();
+                                serverClient.sendMsgs();
                             }
                             Thread.sleep(1000);
                             for(Message msg : m.get()){
                                 if (timer == msg.getTime()) {
                                     for (ServerClient serverClient : allClient) {
                                         serverClient.sendEvent(msg);
-                                        m.remove(msg);
                                     }
+                                    m.remove(msg);
                                     //JOptionPane.showMessageDialog(this, item.getValue());
                                     // отправить сообщение клиентам
                                 }

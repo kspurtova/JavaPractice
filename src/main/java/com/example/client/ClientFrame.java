@@ -83,6 +83,7 @@ public class ClientFrame extends JFrame{
         container.add(textMessages);
 
     }
+
     Thread t;
     public void connect() {
         if(t!=null)
@@ -149,7 +150,7 @@ public class ClientFrame extends JFrame{
                                         labelInfo.setText("Error");
                                         repaint();
                                     }
-                                    repaint();
+                                    //repaint();
                                 }
                             } catch (IOException ex) {
                                 ex.printStackTrace();

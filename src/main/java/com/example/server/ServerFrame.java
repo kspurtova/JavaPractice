@@ -78,8 +78,6 @@ public class ServerFrame extends JFrame{
         ipBox.addActionListener(e -> ip = (InetAddress)ipBox.getSelectedItem());
         container.add(ipBox);
 
-
-
         buttonRunServer.addActionListener(e -> runServer());
         container.add(buttonRunServer);
 
@@ -89,7 +87,6 @@ public class ServerFrame extends JFrame{
         buttonStart.addActionListener(e -> server.start());
         container.add(buttonStart);
 
-
         buttonStop.addActionListener(e -> server.stop());
         container.add(buttonStop);
 
@@ -98,8 +95,6 @@ public class ServerFrame extends JFrame{
 
         container.add(labelMessages);
         container.add(labelEvent);
-
-
     }
 
 //    // РАБОТА С БУДИЛЬНИКОМ

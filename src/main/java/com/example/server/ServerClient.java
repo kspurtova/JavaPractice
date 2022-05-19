@@ -53,8 +53,8 @@ public class ServerClient {
 
                             m.save(msg);
                             //server.addMsg(msg.getMessages());
-                            sendTime();
-                            sendMsgs();
+                            //sendTime();
+                            //sendMsgs();
                         }
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -104,6 +104,8 @@ public class ServerClient {
         }
     }
 
+
+    synchronized
     void sendMsgs() {
         // Из модели получаем список всех сообщений, которые
         // хранятся внутри неё, конвертируем в строчку и
